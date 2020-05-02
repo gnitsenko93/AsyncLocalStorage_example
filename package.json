@@ -1,0 +1,16 @@
+{
+  "name": "async-hook-example",
+  "version": "0.0.1",
+  "description": "A simple example of AsyncLocalStorage usage.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./misc/start-application-script.js",
+    "test": "node ./test/application-integration-test.js"
+  },
+  "author": "Greg Nitsenko",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "uuid": "^8.0.0"
+  }
+}
