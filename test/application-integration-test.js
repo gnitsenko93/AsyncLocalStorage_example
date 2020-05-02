@@ -10,7 +10,7 @@ const Controller = require('../controller');
 const Broadcaster = require('../broadcaster');
 const Streamer = require('../streamer');
 
-const ConsoleLogger = require('../console-loger');
+const ConsoleLogger = require('../console-logger');
 
 const { host, port } = require('../config.json');
 
