@@ -1,12 +1,8 @@
 'use strict';
 
-const stream = require('stream');
-
-class Streamer extends stream.PassThrough {
+class Streamer {
 
     constructor(options) {
-        super();
-
         const { logger } = options;
 
         this._logger = logger;
