@@ -1,6 +1,5 @@
 'use strict';
 
-const _ = require('lodash');
 const stream = require('stream');
 
 class Streamer extends stream.PassThrough {
@@ -22,13 +21,19 @@ class Streamer extends stream.PassThrough {
     broadcast(options) {
         const { from, data } = options;
 
-        _.forEach(this._sockets, socket => { 
+        this._sockets.forEach(socket => { 
             if (socket !== from) socket.write(data);
         });
     }
 
     unregister(socket) {
-        _.remove(this._sockets, _socket => socket);
+        const sockets = [];
+
+        this._sockets.forEach(_socket => {
+            if (_socket !== socket) this._sockets.push(socket);
+        })
+
+        this._sockets = sockets;
     }
 }
 

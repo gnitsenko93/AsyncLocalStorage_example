@@ -1,7 +1,5 @@
 'use strict';
 
-const _ = require('lodash');
-
 class ConsoleLogger {
 
     constructor(options) {
@@ -27,7 +25,7 @@ class ConsoleLogger {
 
         message = '[' + msg + ']';
 
-        if (!_.isEmpty(meta)) {
+        if (Object.keys(meta).length) {
             additions = '[' + JSON.stringify(meta) + ']';
         }
 
